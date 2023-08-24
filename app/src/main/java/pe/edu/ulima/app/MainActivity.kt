@@ -9,8 +9,12 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import pe.edu.ulima.app.ui.theme.AppTheme
+import pe.edu.ulima.app.ui.theme.Orange400
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +35,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Text(
+        text = stringResource(id = R.string.app_title),
+        style = MaterialTheme.typography.h1,
+        textAlign = TextAlign.Center,
+    )
 }
 
 @Preview(showBackground = true)
